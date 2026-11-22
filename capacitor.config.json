@@ -1,0 +1,18 @@
+{
+  "appId": "com.weybla.member",
+  "appName": "Weybla",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": [
+      "*.googleapis.com",
+      "*.firebaseapp.com",
+      "firestore.googleapis.com",
+      "api.cloudinary.com",
+      "res.cloudinary.com",
+      "*.gstatic.com",
+      "*.google.com"
+    ]
+  }
+}

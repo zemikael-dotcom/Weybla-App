@@ -1,33 +1,25 @@
-WEYBLA MEMBER - ANDROID APK BUILD
+ወይቤላ — Capacitor Android ፕሮጀክት
 
-ይህ ፕሮጀክት የተሰጠውን Weybla_Member_App_v58_PDF_FIX.html በCapacitor Android ውስጥ ያስቀምጣል።
+የመጀመሪያው www/index.html በውስጡ ተጠብቋል፤ ዲዛይኑና የድረ-ገጽ ኮዱ አልተቀየረም።
 
-APK ለመገንባት የሚያስፈልጉት:
-- Node.js LTS
-- Android Studio (Android SDK እና Build Tools ጨምሮ)
+ፋይል መምረጥ/መጫን:
+- HTML ውስጥ 15 የ file input መስኮቶች ተገኝተዋል።
+- የክፍያ ደረሰኞች፣ የመታወቂያ ሰነዶች እና ሌሎች ፋይሎችን ለመምረጥ የተዘጋጁ ናቸው።
+- ኮዱ Cloudinary ላይ ፋይል ይጭናል። የአፑ የፋይል ማስጫኛ ባህሪ በተለያዩ Android ስልኮች ላይ መፈተሽ ያስፈልጋል።
+- ይህ ከመሣሪያው ወደ አፑ ፋይል መምረጥ/መጫን ነው፤ ከአፑ ወደ ሌላ ሰው ፋይል መላክ (share) የተለየ ባህሪ ነው።
 
-በኮምፒውተር ላይ:
-1. ZIP ፋይሉን Extract ያድርጉ።
-2. የWeybla_Capacitor ፎልደርን በTerminal/CMD ይክፈቱ።
-3. npm install
-4. npx cap add android   (android ፎልደር ከሌለ ብቻ)
-5. npx cap sync android
-6. npx cap open android
-7. Android Studio ሲከፈት Build > Build Bundle(s) / APK(s) > Build APK(s) ይምረጡ።
+APK ለመገንባት:
+1. ይህን ZIP ወደ GitHub repository አስገባ።
+2. GitHub > Actions > Build Weybla Android APK > Run workflow ጫን።
+3. ሲጨርስ Weybla-debug-apk artifact አውርድ።
 
-APK በ android/app/build/outputs/apk/debug/app-debug.apk ውስጥ ይገኛል።
+በኮምፒውተር ላይ በእጅ:
+  npm install
+  npx cap add android
+  npx cap sync android
+  cd android && ./gradlew assembleDebug
 
-ማስታወሻ:
-- ይህ የመጀመሪያ Capacitor project scaffold ነው፤ በዚህ አካባቢ Android SDK ስላልተገኘ APK እዚህ ላይ መገንባት አልተቻለም።
-- የHTML ፋይሉ ዋና ይዘት አልተቀየረም። Firebase/Cloudinary እና ካርታ የመሳሰሉ የኢንተርኔት ባህሪያት ኢንተርኔት ይፈልጋሉ።
+Package ID: com.weybla.member
+App name: Weybla
 
-ስልክ ብቻ ካለህ (GitHub በመጠቀም):
-1. ZIP ፋይሉን አውርድና Extract/Unzip አድርግ።
-2. github.com ላይ ነፃ መለያ ክፈት/ግባ።
-3. New repository ፍጠር።
-4. የZIP ውስጡን ፋይሎች ሁሉ ወደ repository ጫን፤ .github ፎልደሩንም አትተወው።
-5. Repository > Actions > Build Weybla APK > Run workflow ተጫን።
-6. ስራው ከተሳካ በኋላ Actions ውስጥ የተጠናቀቀውን run ክፈት፤ Artifacts ስር Weybla-Member-debug-APK አውርድ።
-7. ZIP ፋይሉን ክፈትና app-debug.apk ጫን።
-
-ማስታወሻ: GitHub ላይ የሚገነባው Debug APK ነው። በመጀመሪያ ስልክህ ላይ ለመሞከር ይህ በቂ ነው።
+ማስታወሻ: ይህ source project ነው፤ APK አልተገነባም። Android build በGitHub Actions ወይም Android Studio ይፈጠራል።
