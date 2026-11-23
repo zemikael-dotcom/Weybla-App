@@ -1,4 +1,4 @@
-package com.weybla.member;
+package com.weybla.com;
 
 import com.getcapacitor.BridgeActivity;
 
